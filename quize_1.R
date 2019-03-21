@@ -10,7 +10,7 @@ Coupay=function(C,F){
 }
 Coupay(6,100)
 
-##-	Here we can give any value for C and F with a given vector of effective half yearly interest
+##Here we can give any value for C and F with a given vector of effective half yearly interest
 #rates and calculate the price of the bond.  Above I've used C,F as 6, 100 respectively. 
 
 ##Question03
@@ -56,7 +56,7 @@ summary(lr)
 
 ##Comments: 
 #P-value of "exp" is very small, which indicates that predictor is significant. 
-#Thus, there's a relationship between "gdp" and "ëxp". 
+#Thus, there's a relationship between "gdp" and "Ã«xp". 
 #Adjusted R-squared value is small, i.e. the model fit isn't good. 
 
 #G
