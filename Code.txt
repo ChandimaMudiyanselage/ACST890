@@ -1,0 +1,35 @@
+Question 1
+
+#part b
+#!/bin/bash
+# save as triplet-stop.sh
+# splits a sequence into triplets
+x=0
+while [ -n "${1:$x:3}" ]; do
+  seq=$seq${1:$x:3}" "
+  x=$(expr $x + 3)
+  if [ ${1:$x:3} == taa ] && [ $x -gt 6 ]; then
+    break
+  fi
+done
+if [ $x -lt 9 ]; then
+echo "error"
+else
+echo "$seq"
+fi
+
+Question 2
+#to upload file into AWS account
+scp -i 44410204.pem tutes.txt ubuntu@ec2-54-66-180-191.ap-southeast-2.compute.amazonaws.com:
+#part b
+cat tutes.txt |sort| uniq
+
+Question 3
+11.2) 
+egrep "^[[:alnum:]]+ {1,}[[:alnum:]]+ {1,}[[:alnum:]]+ {0,}$" 112.txt
+11.3) 
+grep -E "[-][0-9]+" 113.txt | grep -vE [.]
+11.4) 
+egrep ' [-0-9]+\.[0-9] ' 114.txt
+11.6) 
+grep -Ew 'hydrogenase' 116.txt | grep -vEw 'dehydrogenase'
