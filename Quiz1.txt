@@ -1,0 +1,47 @@
+Question 1
+
+#Part a
+#Copy the URL to that script and type “curl URL” to download it to AWS account
+curl https://www.staff.hs-mittweida.de/~wuenschi/data/media/compbiolbook/chapter-10-shell-programming--triplet-stop.sh
+
+#Part b
+#Take the code to nano
+nano chapter-10-shell-programming--triplet-stop.sh
+#Modified code so the program stops when it reads the character sequence ‘taa’ and it has read at least 9 characters already
+#!/bin/bash
+# save as triplet-stop.sh
+# splits a sequence into triplets
+x=0
+while [ -n "${1:$x:3}" ]; do
+  seq=$seq${1:$x:3}" "
+  x=$(expr $x + 3)
+  if [ ${1:$x:3} == taa ] && [ $x -gt 6 ]; then
+    break
+  fi
+done
+if [ $x -lt 9 ]; then
+echo "error"
+else
+echo "$seq"
+fi
+
+#code to check output for abcdefghitaahjkkhh
+./chapter-10-shell-programming--triplet-stop.sh abcdefghitaahjkkhh
+#code to check output for abc(which should give "error" as output)
+./chapter-10-shell-programming--triplet-stop.sh abc
+
+Question 2
+#to upload file into AWS account
+scp -i 44410204.pem tutes.txt ubuntu@ec2-54-66-180-191.ap-southeast-2.compute.amazonaws.com:
+#part b
+cat tutes.txt |sort| uniq
+
+Question 3
+11.2) 
+egrep "^[[:alnum:]]+ {1,}[[:alnum:]]+ {1,}[[:alnum:]]+ {0,}$" 112.txt
+11.3) 
+grep -E "[-][0-9]+" 113.txt | grep -vE [.]
+11.4) 
+egrep ' [-0-9]+\.[0-9] ' 114.txt
+11.6) 
+grep -Ew 'hydrogenase' 116.txt | grep -vEw 'dehydrogenase'
