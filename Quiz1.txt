@@ -1,13 +1,13 @@
 Question 1
 
 #Part a
-#Copy the URL to that script and type ìcurl URLî to download it to AWS account
+#Copy the URL to that script and type ‚Äúcurl URL‚Äù to download it to AWS account
 curl https://www.staff.hs-mittweida.de/~wuenschi/data/media/compbiolbook/chapter-10-shell-programming--triplet-stop.sh
 
 #Part b
 #Take the code to nano
 nano chapter-10-shell-programming--triplet-stop.sh
-#Modified code so the program stops when it reads the character sequence ëtaaí and it has read at least 9 characters already
+#Modified code so the program stops when it reads the character sequence ‚Äòtaa‚Äô and it has read at least 9 characters already
 #!/bin/bash
 # save as triplet-stop.sh
 # splits a sequence into triplets
@@ -27,8 +27,8 @@ fi
 
 #code to check output for abcdefghitaahjkkhh
 ./chapter-10-shell-programming--triplet-stop.sh abcdefghitaahjkkhh
-#code to check output for abc(which should give "error" as output)
-./chapter-10-shell-programming--triplet-stop.sh abc
+#code to check output for abtaa(which should give "error" as output)
+./chapter-10-shell-programming--triplet-stop.sh abtaa
 
 Question 2
 #to upload file into AWS account
