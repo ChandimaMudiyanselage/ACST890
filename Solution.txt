@@ -1,0 +1,28 @@
+#Download file
+
+#Part A
+sed 's/Beisel/Weisel/' chapter-11-regex--structure.pdb
+
+#Part B
+sed '1,3d' chapter-11-regex--structure.pdb
+
+#Part C
+sed -n '5,10p' chapter-11-regex--structure.pdb
+
+#Part D
+sed '/MET/d' chapter-11-regex--structure.pdb
+
+#Part E
+sed -n '/HELIX.*ILE/p' chapter-11-regex--structure.pdb
+
+#Part F
+sed '/^H/s/$/***/' chapter-11-regex--structure.pdb
+
+#Part G
+sed '/SEQRES/s/^.*$/SEQ/' chapter-11-regex--structure.pdb
+
+#Part H
+sed '/^.$/d' jabberwocky.txt
+
+
+
