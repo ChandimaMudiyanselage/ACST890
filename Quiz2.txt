@@ -1,6 +1,6 @@
 #How to download the file
 #Go to https://www.staff.hs-mittweida.de/~wuenschi/doku.php?id=rwbook2 
-#then download ‘structure.pdb’ file which is under the topic “11 - Regular Expressions”
+#Then download ‘structure.pdb’ file which is under the topic “11 - Regular Expressions”
 #Then save that file on working directory 
 #Then go to “File-Zilla” and upload that file from your machine to “AWS instance”
 
