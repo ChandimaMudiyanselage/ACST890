@@ -26,6 +26,8 @@ sed '/^H/s/$/***/' chapter-11-regex--structure.pdb
 sed '/SEQRES/s/^.*$/SEQ/' chapter-11-regex--structure.pdb
 
 #Part H
+#Download ‘jabberwocky.txt’ file to working directory and upload it to AWS using File-Zilla
+#Now type following command to delete all blank lines of that file
 sed '/^.$/d' jabberwocky.txt
 
 
