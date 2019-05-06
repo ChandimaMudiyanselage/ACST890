@@ -22,7 +22,9 @@ Question 02
 wget https://introcs.cs.princeton.edu/python/code/stdio.py
 #to excute stdio.py
 chmod u+x stdio.py
-#(a)
+#to view userargument.py
+nano userargument.py
+#a
 python3 userargument.py python
 #b
 python3 userargument.py @!&^%
