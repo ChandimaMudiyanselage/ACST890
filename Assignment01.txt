@@ -1,0 +1,67 @@
+Question 01
+#!/usr/bin/env python3
+# Code to change "Huck" to "HucK"
+# save as Question01.py
+with open('twain.txt', 'r') as file :
+  filedata = file.read()
+
+# Replace the target string
+filedata = filedata.replace('Huck', 'HucK')
+
+# Write the file out again
+with open('twain.txt', 'w') as file:
+  file.write(filedata)
+
+# To make the code executable
+chmod u+x Question01.py
+# Then to run it
+./Question01.py
+
+
+
+
+Question 03
+#!/usr/bin/env python3
+#filename: question03.py
+year=int(input("Enter year to be checked:"))
+if(year%4==0 and year%100!=0 or year%400==0):
+    print("The year is a leap year!")
+else:
+    print("The year isn't a leap year!")
+
+Question 04
+#!/usr/bin/env python3
+#filename: question04.py
+import random as rd
+year1=int(input("a:"))
+year2=int(input("b:"))
+s = rd.randint(year1,year2)
+print(s)
+
+
+Question 05
+#!/usr/bin/env python3
+#filename: question04.py
+import random as rd
+year1=int(input("m:"))
+year2=int(input("d:"))
+d1 = (3, 20)
+d2 = (year1, year2)
+d3 = (6, 20)
+if d1 < d2 < d3:
+    print("BETWEEN!")
+else:
+    print("NOT!")
+
+
+Question 06
+#!/usr/bin/env python3
+#save as question06.py
+from math import *
+import random as rd
+P=float(input("Principal:"))
+r=float(input("Interest Rate:"))
+t=float(input("Number of years:"))
+val=P*(e**(r*t))
+print(val)
+
