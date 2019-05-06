@@ -17,6 +17,24 @@ chmod u+x Question01.py
 # Then to run it
 ./Question01.py
 
+Question 02
+#to download stdio library
+wget https://introcs.cs.princeton.edu/python/code/stdio.py
+#to excute stdio.py
+chmod u+x stdio.py
+#(a)
+python3 userargument.py python
+#b
+python3 userargument.py @!&^%
+#c
+python3 userargument.py 1234
+#d
+python3 userargument.py Bob
+#e
+userargument.py Bob
+#f
+python3 userargument.py Alice Bob
+
 Question 03
 #!/usr/bin/env python3
 #filename: question03.py
